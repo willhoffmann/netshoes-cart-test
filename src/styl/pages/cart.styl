@@ -1,0 +1,195 @@
+/*
+* Cart
+*
+*/
+
+
+.cart
+    background-color $gray-dark
+    border-left 2px solid $gray-lighter
+    bottom 0
+    overflow auto
+    position fixed
+    right -515px
+    top 0
+    width 515px
+    z-index 11
+    transition right .3s
+
+    &-header
+        border none
+        padding 50px 0
+        text-align center
+
+        &__box
+            display inline-block
+            position relative
+            vertical-align top
+
+            &--qty
+                background-color $yellow-base
+                border-radius 15px
+                color $gray-darker
+                display inline-block
+                font-weight 700
+                height 20px
+                line-height 20px
+                padding 0
+                position relative
+                text-align center
+                top 5px
+                left -15px
+                width 20px
+
+            &--title
+                color $white
+                font-size 20px
+                font-weight 700
+                line-height 100%
+                margin 0 24px 0 0
+                position relative
+                text-transform uppercase
+                top -7px
+
+    &__empty
+        border-bottom  2px solid $gray-darker
+        border-top 2px solid $gray-darker
+        padding 20px 0
+
+        &--message
+            color $white
+            font-size 18px
+            margin-left 15px
+            text-align center
+
+    &__products
+        list-style none
+        padding 0
+
+    &__product-item
+        border-top 2px solid $gray-darker
+        cursor pointer
+        overflow hidden
+        padding 25px 0
+        position relative
+
+        &:last-child
+            border-bottom 2px solid $gray-darker
+
+        &:hover
+            background-color $gray-darker
+
+        &--image
+            float left
+            margin-right 20px
+            margin-left 15px
+            width 50px
+
+        &__content
+            float left
+            width 70%
+
+            &--title
+                color $white
+                font-size 14px
+                font-weight 600
+                margin-bottom 5px
+                margin-top 0
+
+            &--info,
+            &--quantity
+                color $gray-light
+                display block
+                font-size 12px
+                font-weight 400
+
+        &--btn-remove
+            background-color transparent
+            border none
+            color $gray-darker
+            cursor pointer
+            font-size 20px
+            font-weight 600
+            line-height 1
+            padding 5px 20px
+            position absolute
+            right 2px
+            top 20px
+
+            &:before
+                content "\d7"
+
+            &:focus
+                outline none
+
+            &:hover
+                color $white
+
+        &--price
+            bottom 25px
+            color $yellow-base
+            font-size 14px
+            font-weight 700
+            margin-right 15px
+            position absolute
+            right 0
+
+    &__footer
+        margin 0 15px 0 15px 0
+
+        &__total
+            overflow hidden
+            padding 30px 0
+
+            &--label
+                color $gray-light
+                font-size 14px
+                float left
+                text-transform uppercase
+
+            &--price
+                float right
+
+            &--value,
+            &--installments
+                display block
+                text-align right
+
+            &--value
+                color $yellow-base
+                font-size 24px
+                font-weight 700
+
+            &--installments
+                color $gray-light
+                font-size 12px
+                text-transform uppercase
+
+        &--btn-buy
+            background-color #000
+            border none
+            color $white
+            font-size 14px
+            padding 20px 0
+            text-transform uppercase
+            width 100%
+
+// Cart overlay
+#cart-overlay
+    background-color rgba($white, .8)
+    bottom 0
+    left 0
+    position fixed
+    right 0
+    top 0
+    z-index 10
+
+
+// Open cart
+.open-cart
+    overflow-x hidden
+
+    .cart
+        right 0
+
+

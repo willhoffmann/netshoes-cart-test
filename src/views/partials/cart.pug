@@ -1,0 +1,24 @@
+aside.cart
+    header.cart-header
+        .cart-header__box
+            img(src="assets/img/bag.png")
+            span.cart-header__box--qty.topbar__cart--qty 0
+            span.cart-header__box--title Sacola
+
+    .cart__empty#cart-empty
+        span.cart__empty--message Não existe nenhum item na sacola.
+
+    section#cart-main
+        ul.cart__products#cart-products
+
+
+    footer.cart__footer#cart-footer
+        .cart__footer__total
+            label.cart__footer__total--label Subtotal
+
+            .cart__footer__total--price
+                span.cart__footer__total--value#cart-total R$ 500,80
+                span.cart__footer__total--installments#cart-installments em até 10 X R$ 50,00
+
+        a(href="")
+            button.cart__footer--btn-buy comprar

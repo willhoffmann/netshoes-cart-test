@@ -1,0 +1,82 @@
+/*
+* Products
+*
+*/
+
+
+.product
+    &-grid
+        display flex
+        flex-wrap wrap
+
+        &-item
+            display flex
+            flex-direction column
+            flex 1 33%
+            margin-bottom 30px
+            padding 2%
+
+
+    &-card
+        text-align center
+
+        &__figure
+            cursor pointer
+
+            img
+                width 100%
+
+        &__details
+            &--description
+                font-weight 400
+                line-height 1.2
+                min-height 36px
+
+            &--price
+                font-size 12px
+                font-weight 400
+                margin-top 7px
+                padding-top 7px
+                position relative
+
+                &:before
+                    background-color $yellow-base
+                    content ""
+                    height 2px
+                    left 50%
+                    position absolute
+                    top 0
+                    width 15px
+                    transform translateX -50%
+
+                span
+                    font-size 32px
+                    font-weight 700
+
+            &--installments
+                color $gray-light
+                font-size 14px
+                margin-top 0
+
+@media (max-width $screen-md)
+    .product
+        &-grid
+            &-item
+                flex 1 100%
+                margin-bottom 30px
+
+        &-card
+            &__details
+                &--description
+                    font-size 22px
+
+                &--price
+                    font-size 20px
+
+                    span
+                        font-size 42px
+
+                &--installments
+                    font-size 20px
+
+
